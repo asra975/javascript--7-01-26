@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h3>Register</h3>
+        <label>email</label>
+        <input name="email"  id="email" type="email" placeholder="Enter a email...." pattern=""/>
+        <label>password</label>
+         <input name="password"  id="password" type="password" placeholder="Enter a password...." pattern=""/>
+         <label>Mobile number</label>
+         <input name="mobile_number"  id="mobile_number" type="mobile_number" placeholder="Enter a mobile number...." pattern=""/>
+         <button onclick="Register()">Register</button>
+
+    </form>
+    
+</body>
+<script>
+    function Register(event){
+        event.preventDefault()
+        const email = document.getElementById('email').value
+         const password = document.getElementById('password').value
+          const mobile = document.getElementById('mobile_number').value
+    }
+</script>
+</html>

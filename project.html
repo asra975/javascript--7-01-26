@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="project.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">My header</div>
+    <div class="main">
+        <div class="navbar">
+           <div class="nav-item">Men</div>
+           <div class="nav-item">women</div>
+           <div class="nav-item">kids</div>
+
+
+        </div>
+        <div class="sidebar">
+
+            <div class="tab" onclick="load('html.html')">
+
+                HTML </div>
+
+            <div class="tab">CSS</div>
+            <div class="tab">Javascript</div>
+            <div class="tab">React</div>
+            <div class="tab">NodeJs</div>
+            <div class="tab">Express</div>
+            <div class="tab">MongoDb</div>
+        </div>
+        <div id="content" class="content">
+
+
+
+
+        </div>
+    </div>
+    <div class="footer">My Footer</div>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script>
+    let items = document.querySelectorAll(".tab");
+    let data = document.getElementById("content");
+    items.forEach((item) => {
+        item.addEventListener("click", () => {
+            const value = item.textContent;
+            data.textContent = value;
+        });
+    });
+    function load(page) {
+        fetch(page)
+            .then(r => r.text())
+            .then(d => document.getElementById("content").innerHTML = d);
+    }
+</script>
+
+</html>

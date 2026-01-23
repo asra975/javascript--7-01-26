@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* #p1{
+        background-color:red;
+        visibility:hidden;
+    } */
+    .card1{
+        margin-right: 45%;
+        padding: 0%;
+        display:block;
+        
+        
+    }
+    </style>
+</head>
+<body>
+    <!-- <p id ="p1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p> -->
+    <!-- <button onclick="display()">Click</button> -->
+    <div class="card">
+        <div class="card1" >
+            <img id="img1" src="bhopal-city.webp" >
+            <button onclick="display()">Click</button>
+            <button onclick="removeImage()">Click</button>
+
+        </div>
+        <div class="card1">
+            <img id="img2" src="indore.webp">
+            <!-- <button onclick="display()">Click</button> -->
+              <button onclick="changeImage()">Click</button>
+        </div>
+    </div>
+</body>
+<script>
+    function display(){
+        // 
+        const data=document.getElementById('img1')
+        if(data.style.display==='block'){
+            data.style.display = 'none'
+        }
+        else{
+            data.style.display ='block'
+        }
+
+    }
+    function removeImage(){
+        if(document.getElementById('img1').style.visibility==='visible'){
+            document.getElementById('img1').style.visibility='hidden'
+        }
+        else{
+            document.getElementById('img1').style.visibility='visible'
+        }
+    }
+    function changeImage(){
+        const data =document.getElementById('img2')
+        .getAttribute('src','indore.webp')
+        if(data==='indore.webp'){
+            document.getElementById('img2')
+            .setAttribute('src','ujjain.webp')
+        }
+        else{
+            document.getElementById('img2').setAttribute('src', 'indore.webp')
+        }
+        }
+
+    
+</script>
+</html>
